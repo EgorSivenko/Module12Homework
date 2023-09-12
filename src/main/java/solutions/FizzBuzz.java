@@ -4,14 +4,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class FizzBuzz {
-    private final List<String> sequence;
+    private final List<String> sequence = new ArrayList<>();
+    private volatile int number = 1;
     private final int maxValue;
-    private volatile int number;
 
     public FizzBuzz(int maxValue) {
-        sequence = new ArrayList<>();
         this.maxValue = maxValue;
-        this.number = 1;
     }
 
     public static void main(String[] args) {
